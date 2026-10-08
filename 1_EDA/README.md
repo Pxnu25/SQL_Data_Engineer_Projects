@@ -1,8 +1,5 @@
 # Exploratory Data Analysis w/ SQL: Job Market Analysis
 
----
-
-[Link Text](https://google.com)
 
 ![Project 1 Overview](../Images/1_1_Project1_EDA.png)
 
