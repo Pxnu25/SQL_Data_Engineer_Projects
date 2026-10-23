@@ -1,12 +1,13 @@
 -- Step 1: DW - Create star schema tables
 
-
+-- วิธี Drop table ต้องลบจาก bridge table ก่อน เพราะมี FK อ้างอีก 2 ตาราง
 DROP TABLE IF EXISTS skills_job_dim;
 DROP TABLE IF EXISTS job_postings_fact;
 DROP TABLE IF EXISTS company_dim;
 DROP TABLE IF EXISTS skills_dim;
 
-
+-- ลำดับการ CREATE Table 
+-- สำหรับ company_dim กับ skills_dim อันไหนจะขึ้นก่อนก็ได้ เพราะไม่มีอะไรอ้างอิงถึงกัน
 CREATE TABLE company_dim (
     company_id  INTEGER    PRIMARY KEY,
     name        VARCHAR
@@ -14,7 +15,7 @@ CREATE TABLE company_dim (
 
 CREATE TABLE skills_dim (
     skill_id    INTEGER    PRIMARY KEY,
-    skill       VARCHAR,
+    skills       VARCHAR,
     type        VARCHAR
 );
 
